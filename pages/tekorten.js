@@ -9,15 +9,15 @@ export default function TekortenPage() {
   }, [])
 
   return (
-    <main style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
+    <main style={{ fontFamily: 'Arial', padding: '2rem' }}>
       <h1>Voorraadtekorten</h1>
       {tekorten.length === 0 ? (
-        <p>Er zijn momenteel geen tekorten 🎉</p>
+        <p>Geen tekorten 🎉</p>
       ) : (
         <ul>
-          {tekorten.map(item => (
-            <li key={item.id}>
-              <strong>{item.productnaam}</strong>: {item.aantal} (min. {item.minimum})
+          {tekorten.map((t) => (
+            <li key={t.id}>
+              {t.productnaam}: {t.aantal} (min: {t.minimum})
             </li>
           ))}
         </ul>
