@@ -1,5 +1,4 @@
-import Dashboard from './dashboard'
-
+// pages/index.tsx
 export default function Home() {
-  return <Dashboard />
+  return <h1>Welkom bij de Resto.ai demo</h1>;
 }
